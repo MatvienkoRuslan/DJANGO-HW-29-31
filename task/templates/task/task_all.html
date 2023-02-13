@@ -97,17 +97,16 @@ input {
   </thead>
   <tbody>
   <form>
-    {% for task in task %}
       <tr>
         <td>{{ task.title }}</td>
         <td>{{ task.description }}</td>
         <td>{{ task.created }}</td>
         <td>{{ task.updated }}</td>
         <td>{{ task.completed }}</td>
-        <td>{{ task.category }}</td>
+        <td>{{ task.cat }}</td>
       </tr>
-    {% endfor %}
+
   </form>
 </table>
-<a href="{% url 'task_all' %}">Add Task</a>
+<a href="{% url 'task_add' %}">Add Task</a>
 </body>
